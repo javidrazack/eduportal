@@ -1,27 +1,24 @@
 class CreateStudents < ActiveRecord::Migration[5.0]
-  def change
+  def self.up
     create_table :students do |t|
 
-      t.string     :admission_no
-      t.string     :class_roll_no
-      t.date       :admission_date
-
-      t.string     :first_name
+      t.string     :admission_no, null: false
+      t.string     :class_roll_no, null: false
+      t.string     :first_name, null: false
       t.string     :middle_name
-      t.string     :last_name
+      t.string     :last_name, null: false
 
-      t.references :batch
-      t.date       :date_of_birth
-      t.string     :gender
-      t.string     :blood_group
-      t.references :student_category
+      t.references :batch, null: false
+      t.date       :date_of_birth, null: false
+      t.string     :gender, null: false
+      t.string     :blood_group, null: false
 
-      t.string     :address_line1
+      t.string     :address_line1, null: false
       t.string     :address_line2
-      t.string     :city
-      t.string     :state
-      t.string     :pin_code
-      t.string     :phone1
+      t.string     :city, null: false
+      t.string     :state, null: false
+      t.string     :pin_code, null: false
+      t.string     :phone1, null: false
       t.timestamps
     end
   end
