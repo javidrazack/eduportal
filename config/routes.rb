@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :subjects
   root 'home#index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+  
 
   resources :attendances
   resources :students

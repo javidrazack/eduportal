@@ -1,0 +1,2 @@
+class Internalexam < ApplicationRecord
+end

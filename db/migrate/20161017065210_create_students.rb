@@ -3,12 +3,12 @@ class CreateStudents < ActiveRecord::Migration[5.0]
     create_table :students do |t|
 
       t.string     :admission_no, null: false
-      t.string     :class_roll_no, null: false
+      t.integer    :class_roll_no, null: false
       t.string     :first_name, null: false
       t.string     :middle_name
       t.string     :last_name, null: false
 
-      t.references :batch, null: false
+      t.references :Sem, null: false
       t.date       :date_of_birth, null: false
       t.string     :gender, null: false
       t.string     :blood_group, null: false
