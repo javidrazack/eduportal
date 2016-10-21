@@ -1,6 +1,6 @@
 class CreateStudents < ActiveRecord::Migration[5.0]
   def self.up
-    create_table :students do |t|
+    create_table :students :primary_key =>:admission_no do |t|
 
       t.string     :admission_no, null: false
       t.integer    :class_roll_no, null: false
