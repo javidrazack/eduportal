@@ -2,7 +2,7 @@ class CreateStudents < ActiveRecord::Migration[5.0]
   def self.up
     create_table :students :primary_key =>:admission_no do |t|
 
-      t.string     :admission_no, null: false
+      t.integer     :admission_no, null: false
       t.integer    :class_roll_no, null: false
       t.string     :first_name, null: false
       t.string     :middle_name
